@@ -9,6 +9,14 @@ window.onload = function() {
   canvas.height = canvasContainer.offsetHeight;
 
   // Calculate the circle positions based on canvas size
+  /**
+   * Calculates the Y-coordinate of a circle positioned below another circle.
+   *
+   * @param {number} circleY1 - The Y-coordinate of the top circle.
+   * @param {number} circleRadius - The radius of the circles.
+   * @param {number} circleSpacing - The vertical spacing between the circles.
+   * @returns {number} The Y-coordinate of the bottom circle.
+  */
   var circleRadius = Math.min(canvas.height) * 0.1;
   var circleSpacing = 24; // Adjust the spacing between circles
   var circleX = circleRadius + circleSpacing;
@@ -18,6 +26,10 @@ window.onload = function() {
   var circleY4 = circleY3 + circleRadius * 2 + circleSpacing;
 
   // Calculate the initial arrow positions based on canvas size
+  /**
+   * The starting x-coordinate for the arrow.
+   * @type {number}
+   */
   var arrowStartX = canvas.width - 100;
   var arrowEndX =  canvas.width - 150;
   var arrowWidth = 5;
